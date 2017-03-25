@@ -2,14 +2,30 @@
     <div class="nav">
         <mt-header title="">
           <router-link to="index" slot="left">
-            <mt-button>妙寄官网首页跳转</mt-button>
+            <mt-button @click="navBar ? navBar = false : navBar = false">妙寄官网首页跳转</mt-button>
           </router-link>
-          <mt-button style="width: 3.2rem;" slot="right" @click="actionsheetCotrl"></mt-button>
+          <mt-button style="width: 3.2rem;" slot="right" @click="navBar ? navBar = false : navBar = true"></mt-button>
         </mt-header>
-        <mt-actionsheet
-          :actions="actions"
-          v-model="sheetVisible">
-        </mt-actionsheet>
+        <div class="nav-bar" v-if="navBar" @click="navBar ? navBar = false : navBar = true">
+          <router-link to="index">
+            <p>快递查询</p>
+          </router-link>
+          <router-link to="download">
+            <p>APP下载</p>
+          </router-link>
+          <router-link to="index">
+            <p>城市合伙人</p>
+          </router-link>
+          <router-link to="index">
+            <p>入驻标准</p>
+          </router-link>
+          <router-link to="index">
+            <p>新闻咨询</p>
+          </router-link>
+          <router-link to="index">
+            <p>关于我们</p>
+          </router-link>
+        </div>
     </div>
 </template>
 <script>
@@ -18,26 +34,10 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
-      sheetVisible: false,
-      actions: [{
-        name: '首页',
-        method () {
-          // this.$router.push({'path': 'index'})
-          window.location = 'index.html?jump=index'
-        }
-      }, {
-        name: 'App下载',
-        method () {
-          // this.$router.push({'path': 'download'})
-          window.location = 'index.html?jump=download'
-        }
-      }]
+      navBar: false
     }
   },
   methods: {
-    actionsheetCotrl () {
-      this.sheetVisible ? this.sheetVisible = false : this.sheetVisible = true
-    }
   }
 }
 </script>
@@ -68,6 +68,28 @@ header.mint-header {
     background-size:90% 63%;
     background-repeat: no-repeat;
     background-position: 5px 8px;
+  }
+}
+
+.nav-bar {
+  margin-top: 1px;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  padding: 0 1.2rem;
+  border: 1px solid #ccc;
+  border-top-width: 0;
+  border-right-width: 0;
+  z-index: 100;
+  a {
+    text-decoration: none;
+  }
+  p {
+    margin: 0 0;
+    color: rgb(255, 122, 34);
+    border-bottom: 1px solid #ccc;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
   }
 }
 

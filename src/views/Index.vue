@@ -40,7 +40,7 @@
                   <div>快递</div>
                 </div>
                 <div class="index-article-list-item-words">
-                  中端快递市场巨大，收派两段，引入强大的流量入口。稳定的经济收入，直接提高现金流。
+                  终端快递市场巨大，收派两段，引入强大的流量入口。稳定的经济收入，直接提高现金流。
                 </div>
             </div>   
           </div>
@@ -86,7 +86,7 @@
 
         <div class="customer-service">
           <div>
-            <i class="phone"></i><span>客服电话：4008201563(9:30-18:00在线)</span>
+            <i class="phone"></i><span>客服电话：<a href="tel:4008201563">4008201563</a>&nbsp;&nbsp;( 9:30-18:00在线 )</span>
           </div>
         </div>
     </div>
@@ -266,6 +266,11 @@ export default {
         color: #333;
         padding-left: 10px;
         font-size: 13px;
+      }
+      a {
+        font-weight: 600;
+        color: #333;
+        text-decoration: none;
       }
     }
   }

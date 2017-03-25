@@ -18,11 +18,11 @@ Vue.config.productionTip = false
 Vue.component('mj-nav', Nav)
 Vue.component('mj-footer', Footer)
 
-// router.afterEach((to, from) => {
-//   if (to.path === '/') {
-//     return router.push({'path': 'index'})
-//   }
-// })
+router.afterEach((to, from) => {
+  if (to.path === '/') {
+    return router.push({'path': 'index'})
+  }
+})
 
 /* eslint-disable no-new */
 new Vue({

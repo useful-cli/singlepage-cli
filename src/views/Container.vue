@@ -11,13 +11,6 @@
 export default {
   name: 'container',
   created () {
-    let href = window.location.href
-    const reg = new RegExp('jump=', ['g'])
-    href = reg.test(href) ? href.split(reg)[1].replace('#/', '') : 'index'
-    if (href === '') {
-      href = 'index'
-    }
-    this.$router.push({'path': href})
   },
   data () {
     return {
