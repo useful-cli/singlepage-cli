@@ -1,29 +1,35 @@
 <template>
     <div class="nav">
         <mt-header title="">
-          <router-link to="index" slot="left">
+          <router-link to="/index" slot="left">
             <mt-button @click="navBar ? navBar = false : navBar = false">妙寄官网首页跳转</mt-button>
           </router-link>
           <mt-button style="width: 3.2rem;" slot="right" @click="navBar ? navBar = false : navBar = true"></mt-button>
         </mt-header>
         <div class="nav-bar" v-if="navBar" @click="navBar ? navBar = false : navBar = true">
-          <router-link to="index">
+          <router-link to="/search/logistics">
             <p>快递查询</p>
           </router-link>
-          <router-link to="download">
+          <router-link to="/download">
             <p>APP下载</p>
           </router-link>
-          <router-link to="index">
+          <router-link to="/partner">
             <p>城市合伙人</p>
           </router-link>
-          <router-link to="index">
+          <router-link to="/enter">
             <p>入驻标准</p>
           </router-link>
-          <router-link to="index">
+          <router-link to="/news">
             <p>新闻咨询</p>
           </router-link>
-          <router-link to="index">
-            <p>关于我们</p>
+          <router-link to="/question">
+            <p>常见问题</p>
+          </router-link>
+          <router-link to="/companyintro">
+            <p>公司介绍</p>
+          </router-link>
+          <router-link to="/recruitment">
+            <p>团队招聘</p>
           </router-link>
         </div>
     </div>
@@ -83,6 +89,11 @@ header.mint-header {
   z-index: 100;
   a {
     text-decoration: none;
+    &:last-child {
+      p {
+        border-bottom-width: 0;
+      }
+    }
   }
   p {
     margin: 0 0;

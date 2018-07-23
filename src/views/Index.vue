@@ -10,16 +10,16 @@
           <div class="swiper-pagination"  slot="pagination"></div>
         </swiper>
         <div class="index-list">
-          <a href="" title="">
+          <router-link to="search/logistics">
             <div class="index-list-content is-left">
               <i class="wuliu-icon"></i><span class="list-word">物流查询</span>
             </div>
-          </a>
-          <a href="" title="">
+          </router-link>
+          <router-link to="search/station">
             <div class="index-list-content is-right">
               <i class="fuwu-icon"></i><span class="list-word">服务站查询</span>
             </div>
-          </a>
+          </router-link>
         </div>
 
         <article class="index-article">
@@ -80,7 +80,9 @@
         </article>
 
         <div class="join-hands">
-          <a href="" title="">
+          <router-link to="join">
+            
+          </router-link>
           </a>
         </div>
 
@@ -188,7 +190,7 @@ export default {
   }
 
   &-article {
-    padding: 0 16px;
+    padding: 0 2rem;
     &-title {
       height: 95px;
       display: flex; 

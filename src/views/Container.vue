@@ -39,6 +39,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less">
 .mj-container {
-    min-height: 73vh;
+    min-height: 76vh;
 }
 </style>

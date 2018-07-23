@@ -2,7 +2,7 @@
     <div class="download">
           <img src="../assets/download/pho_bj.png" alt="">
           <div class="download__click">
-            <a class="" href="http://www.mijihome.cn/mijihome/miji.apk" title="">
+            <a class="" href="http://www.mijihome.cn/apk/download.html" title="">
             </a>
           </div>
     </div>
@@ -37,7 +37,7 @@ export default {
       display: inline-block;
       width: 14.6rem;
       height: 6rem;
-      background: url('../assets/download/pho_dow.png') no-repeat;
+      background: url('../assets/download/dow.png') no-repeat;
       // background-position: 50% 36%;
       background-size: 100% 100%;
     }
